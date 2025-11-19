@@ -8,12 +8,12 @@ import { Paginacion } from "../../shared/paginacion/paginacion";
 import { BotoneraRpp } from "../../shared/botonera-rpp/botonera-rpp";
 
 @Component({
-  selector: 'app-plist',
+  selector: 'app-routed-admin-plist',
   imports: [RouterLink, Paginacion, BotoneraRpp],
-  templateUrl: './plist.html',
-  styleUrl: './plist.css',
+  templateUrl: './routed-admin-plist.html',
+  styleUrl: './routed-admin-plist.css',
 })
-export class PlistBlog {
+export class RoutedAdminPlist {
   oPage: IPage<IBlog> | null = null;
   numPage: number = 0;
   numRpp: number = 5;

@@ -2,12 +2,12 @@ import { Component, Input } from '@angular/core';
 import { IBlog } from '../../../model/blog';
 
 @Component({
-  selector: 'app-view',
+  selector: 'app-unrouted-admin-view',
   imports: [],
-  templateUrl: './view.html',
-  styleUrl: './view.css',
+  templateUrl: './unrouted-admin-view.html',
+  styleUrl: './unrouted-admin-view.css',
 })
-export class ViewBlog {
+export class UnroutedAdminView {
   @Input() oBlog: IBlog | null = null;
 
 }

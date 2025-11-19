@@ -3,15 +3,15 @@ import { IBlog } from '../../../model/blog';
 import { BlogService } from '../../../service/blog';
 import { ActivatedRoute } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
-import { ViewBlog } from "../view/view";
+import { UnroutedUserView } from "../unrouted-user-view/unrouted-user-view";
 
 @Component({
-  selector: 'app-routed-view',
-  imports: [ViewBlog],
-  templateUrl: './routed-view.html',
-  styleUrl: './routed-view.css',
+  selector: 'app-routed-user-view',
+  imports: [UnroutedUserView],
+  templateUrl: './routed-user-view.html',
+  styleUrls: ['./routed-user-view.css'],
 })
-export class RoutedView {
+export class RoutedUserView {
   oBlog: IBlog | null = null;
 
   constructor(private oBlogService: BlogService, private route: ActivatedRoute) {

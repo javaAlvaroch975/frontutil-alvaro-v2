@@ -31,7 +31,7 @@
     @for (oBlog of oPage?.content; track oBlog.id ) {
     <div class="post-row mt-5">
       <div class="post-item">
-        <app-front-view-post [oBlog]="oBlog"> </app-front-view-post>
+        <app-unrouted-user-view2 [oBlog]="oBlog"> </app-unrouted-user-view2>
       </div>
     </div>
     }

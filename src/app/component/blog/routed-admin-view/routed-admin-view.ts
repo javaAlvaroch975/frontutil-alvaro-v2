@@ -3,15 +3,15 @@ import { IBlog } from '../../../model/blog';
 import { BlogService } from '../../../service/blog';
 import { ActivatedRoute } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
-import { PostView } from "../post-view/post-view";
+import { UnroutedAdminView } from "../unrouted-admin-view/unrouted-admin-view";
 
 @Component({
-  selector: 'app-post-routed-view',
-  imports: [PostView],
-  templateUrl: './post-routed-view.html',
-  styleUrls: ['./post-routed-view.css'],
+  selector: 'app-routed-admin-view',
+  imports: [UnroutedAdminView],
+  templateUrl: './routed-admin-view.html',
+  styleUrl: './routed-admin-view.css',
 })
-export class PostRoutedView {
+export class RoutedAdminView {
   oBlog: IBlog | null = null;
 
   constructor(private oBlogService: BlogService, private route: ActivatedRoute) {

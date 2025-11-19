@@ -4,19 +4,19 @@ import { IPage } from '../../../model/plist';
 import { IBlog } from '../../../model/blog';
 import { BlogService } from '../../../service/blog';
 import { Paginacion } from "../../shared/paginacion/paginacion";
-import { FrontViewPost } from "../front-view/front-view";
+import { UnroutedUserView2 } from "../unrouted-user-view2/unrouted-user-view2";
 
 
 @Component({
-  selector: 'app-front-plist',
-  imports: [Paginacion, FrontViewPost],
-  templateUrl: './front-plist.html',
-  styleUrl: './front-plist.css',
+  selector: 'app-routed-user-plist',
+  imports: [Paginacion, UnroutedUserView2],
+  templateUrl: './routed-user-plist.html',
+  styleUrl: './routed-user-plist.css',
 })
-export class FrontPlist {
+export class RoutedUserPlist {
   oPage: IPage<IBlog> | null = null;
   numPage: number = 0;
-  numRpp: number = 2;  
+  numRpp: number = 2;
 
   constructor(private oBlogService: BlogService) { }
 
@@ -27,7 +27,7 @@ export class FrontPlist {
   }
 
   getPage() {
-    this.oBlogService.getPage(this.numPage, this.numRpp, 'fechaModificacion', 'desc').subscribe({
+    this.oBlogService.getPage(this.numPage, this.numRpp, 'fechaCreacion', 'desc').subscribe({
       next: (data: IPage<IBlog>) => {
         this.oPage = data;
         // OJO! si estamos en una página que supera el límite entonces nos situamos en la ultima disponible

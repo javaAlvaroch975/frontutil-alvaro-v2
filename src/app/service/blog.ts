@@ -26,4 +26,16 @@ export class BlogService {
     return this.oHttp.get<IBlog>(serverURL + '/blog/' + id);
   }
 
+  create(blog: Partial<IBlog>): Observable<number> {
+    return this.oHttp.post<number>(serverURL + '/blog', blog);
+  }
+
+  update(blog: Partial<IBlog>): Observable<number> {
+    return this.oHttp.put<number>(serverURL + '/blog', blog);
+  }
+
+  delete(id: number): Observable<number> {
+    return this.oHttp.delete<number>(serverURL + '/blog/' + id);
+  }
+
 }

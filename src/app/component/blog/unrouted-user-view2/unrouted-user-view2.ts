@@ -4,12 +4,12 @@ import { IBlog } from '../../../model/blog';
 import { TrimPipe } from "../../../pipe/trim-pipe";
 
 @Component({
-  selector: 'app-front-view-post',
+  selector: 'app-unrouted-user-view2',
   imports: [TrimPipe, RouterLink],
-  templateUrl: './front-view.html',
-  styleUrl: './front-view.css',
+  templateUrl: './unrouted-user-view2.html',
+  styleUrl: './unrouted-user-view2.css',
 })
-export class FrontViewPost implements OnInit {
+export class UnroutedUserView2 implements OnInit {
   @Input() oBlog: IBlog | null = null;
 
   iconClass: string = 'bi bi-newspaper';
