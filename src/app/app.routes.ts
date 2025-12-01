@@ -26,6 +26,13 @@ import { SoaresRoutedAdminEdit } from './component/soares/routed-admin-edit/rout
 import { SoaresRoutedAdminRemove } from './component/soares/routed-admin-remove/routed-admin-remove';
 import { SoaresRoutedUserPlist } from './component/soares/routed-user-plist/routed-user-plist';
 import { PreguntasPorTemaComponent } from './component/soares/preguntas-por-tema/preguntas-por-tema';
+import { RoutedAlfonsoAdminPlist } from './component/alfonso/routed-admin-plist/routed-admin-plist';
+import { RoutedAlfonsoAdminView } from './component/alfonso/routed-admin-view/routed-admin-view';
+import { RoutedAlfonsoAdminNew } from './component/alfonso/routed-admin-new/routed-admin-new';
+import { RoutedAlfonsoAdminEdit } from './component/alfonso/routed-admin-edit/routed-admin-edit';
+import { RoutedAlfonsoAdminRemove } from './component/alfonso/routed-admin-remove/routed-admin-remove';
+import { RoutedAlfonsoUserPlist } from './component/alfonso/routed-user-plist/routed-user-plist';
+import { RoutedAlfonsoUserView } from './component/alfonso/routed-user-view/routed-user-view';
 
 //imports Alan
 import { RoutedAlcanyizMenu } from './component/alcanyiz/routed-alcanyiz-menu/routed-alcanyiz-menu'
@@ -46,6 +53,13 @@ import { RoutedAdminView as TablonRoutedAdminView } from './component/contreras/
 import { RoutedAdminNew as TablonRoutedAdminNew } from './component/contreras/tablon/routed-admin-new/routed-admin-new';
 import { RoutedAdminEdit as TablonRoutedAdminEdit } from './component/contreras/tablon/routed-admin-edit/routed-admin-edit';
 import { RoutedAdminRemove as TablonRoutedAdminRemove } from './component/contreras/tablon/routed-admin-remove/routed-admin-remove';
+import { RoutedAdminPlistZanon } from './component/zanon/routed-admin-plist/routed-admin-plist';
+import { RoutedAdminViewZanon } from './component/zanon/routed-admin-view/routed-admin-view';
+import { RoutedUserPlistZanon } from './component/zanon/routed-user-plist/routed-user-plist';
+import { RoutedUserViewZanon } from './component/zanon/routed-user-view/routed-user-view';
+import { RoutedAdminEditZanon } from './component/zanon/routed-admin-edit/routed-admin-edit';
+import { RoutedAdminNewZanon } from './component/zanon/routed-admin-new/routed-admin-new';
+import { RoutedAdminRemoveZanon } from './component/zanon/routed-admin-remove/routed-admin-remove';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -56,6 +70,13 @@ export const routes: Routes = [
   { path: 'blog/new', component: RoutedAdminNew },
   { path: 'blog/edit/:id', component: RoutedAdminEdit },
   { path: 'blog/remove/:id', component: RoutedAdminRemove },
+  { path: 'alfonso', component: RoutedAlfonsoUserPlist },
+  { path: 'alfonso/respuesta/:id', component: RoutedAlfonsoUserView },
+  { path: 'alfonso/plist', component: RoutedAlfonsoAdminPlist },
+  { path: 'alfonso/view/:id', component: RoutedAlfonsoAdminView },
+  { path: 'alfonso/new', component: RoutedAlfonsoAdminNew },
+  { path: 'alfonso/edit/:id', component: RoutedAlfonsoAdminEdit },
+  { path: 'alfonso/remove/:id', component: RoutedAlfonsoAdminRemove },
   { path: 'alcalde', component: AlcaldeRoutedUserPlist },
   { path: 'alcalde/post/:id', component: AlcaldeRoutedUserView },
   { path: 'alcalde/plist', component: AlcaldeRoutedAdminPlist },
@@ -92,4 +113,12 @@ export const routes: Routes = [
   { path: 'tablon/new', component: TablonRoutedAdminNew },
   { path: 'tablon/edit/:id', component: TablonRoutedAdminEdit },
   { path: 'tablon/remove/:id', component: TablonRoutedAdminRemove },
+
+  { path: 'zanon', component: RoutedUserPlistZanon},
+  { path: 'zanon/post/:id', component: RoutedUserViewZanon },
+  { path: 'zanon/plist', component: RoutedAdminPlistZanon },
+  { path: 'zanon/view/:id', component: RoutedAdminViewZanon },
+  { path: 'zanon/new', component: RoutedAdminNewZanon },
+  { path: 'zanon/edit/:id', component: RoutedAdminEditZanon },
+  { path: 'zanon/remove/:id', component: RoutedAdminRemoveZanon },
 ];
